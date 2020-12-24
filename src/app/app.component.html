@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <nav class="navbar navbar-light bg-light justify-content-between">
+    <span class="navbar-brand mb-0 h1">
+      <img src="../assets/images/taskicon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      E-Tasks</span>
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <a  class="nav-link active" routerLink="/tasks">Home</a>
+      </li>
+      <li class="nav-item">
+        <a  class="nav-link" href="/login" (click)="onLogout()">Logout</a>
+      </li>
+    </ul>
+  </nav>
+  <router-outlet>
+
+  </router-outlet>
+</div>

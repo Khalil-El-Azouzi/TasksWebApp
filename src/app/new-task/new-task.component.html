@@ -1,0 +1,25 @@
+<p></p>
+<div class="container container-fluid">
+  <div class="col-md-10 col-sm-7">
+    <div class="card justify-content-center">
+      <div class="card-header bg-light" style=" font-size:larger;">Enter the Conference Details :</div>
+      <div class="card-body">
+        <form #f="ngForm" (ngSubmit)="onAddTask(f.value)">
+          <div class="form-row">
+            <div class="form-group  col-md-8">
+              <label for="inputTitle"> Task Name :</label>
+              <input type="text" class="form-control" id="inputTitle" name="taskName" required="required" ngModel >
+              <span></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-8">
+              <button [disabled]="!f.valid" type="submit" class="btn btn-outline-success btn-group-lg"> Add </button>
+            </div>
+          </div>
+        </form>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>

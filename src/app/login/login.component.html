@@ -1,0 +1,32 @@
+<div class="text-center" data-gr-c-s-loaded="true">
+  <div class="container justify-content-center">
+      <div class="container col-md-4 col-md-2">
+          <p></p>
+          <form #f="ngForm" (ngSubmit)="onLogin(f.value)" >
+            <img class="mb-4" src="../../assets/images/taskicon.png"  alt="" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+            <fieldset>
+              <div class="form-group alert alert-danger" *ngIf="mode==1">
+                <p style="color: #ff0000;">
+                  <strong>Bad Credentials</strong>
+                  ( Invalid username or password. )
+                </p>
+              </div>
+              <label for="inputUsername" class="sr-only">Username</label>
+              <input ngModel type="text" name="username" id="inputUsername" class="form-control" placeholder="Username" required>
+              <label for="inputPassword" class="sr-only">Password</label>
+              <input ngModel type="password" name="password" id="inputPassword" class="form-control" placeholder="Password"
+                     required autocomplete="current_password">
+              <div class="checkbox mb-3">
+                <label>
+                  <input type="checkbox" value="remember-me"> Remember me
+                </label>
+              </div>
+              <button class="btn btn-lg btn-primary" type="submit" >Sign in</button>
+              <button class="btn btn-lg btn-success " type="submit" >Register</button>
+              <p class="mt-5 mb-3 text-muted">©2019-2020</p>
+            </fieldset>
+          </form>
+      </div>
+  </div>
+</div>
